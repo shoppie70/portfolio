@@ -4,11 +4,23 @@
     <article class="text-white">
         <section class="hero" style="background-image: url('{{ Vite::asset('resources/images/bg-sea.jpg') }}')">
             <div class="relative z-10">
-                <p class="mb-6 text-3xl tracking-wider">
+                <p class="mb-6 text-3xl tracking-wider job-title">
                     web developer
                 </p>
-                <h1 class="text-5xl font-bold tracking-widest raleway md:text-8xl">
-                    Sho Tsukamoto
+                <h1 class="title flex overflow-hidden text-5xl font-bold tracking-widest raleway md:text-8xl">
+                    <span>S</span>
+                    <span>h</span>
+                    <span>o</span>
+                    <span>&nbsp;</span>
+                    <span>T</span>
+                    <span>s</span>
+                    <span>u</span>
+                    <span>k</span>
+                    <span>a</span>
+                    <span>m</span>
+                    <span>o</span>
+                    <span>t</span>
+                    <span>o</span>
                 </h1>
             </div>
         </section>

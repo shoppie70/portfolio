@@ -22,21 +22,13 @@ const swiper = new Swiper(".swiper", {
     }
 });
 
-function ban_scroll() {
-    // PC用
-    document.addEventListener("wheel", notscroll, { passive: false });
-    // スマホ用
-    document.addEventListener("touchmove", notscroll, { passive: false });
-}
-// スクロール禁止解除
-function go_scroll() {
-    // PC用
-    document.removeEventListener("wheel", notscroll, { passive: false });
-    // スマホ用
-    document.removeEventListener("touchmove", notscroll, { passive: false });
-}
+const CLASSNAME = "-visible";
+const TIMEOUT = 1500;
+const targets = document.querySelectorAll('.title');
 
-// スクロール禁止関数
-function notscroll(e) {
-    e.preventDefault();
-}
+setInterval(() => {
+    for (let index = 0; index < targets.length; index += 1) {
+        const element = targets[index];
+        element.classList.add(CLASSNAME);
+    }
+}, TIMEOUT);
