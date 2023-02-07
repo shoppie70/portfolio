@@ -4,34 +4,34 @@
     <article class="text-white">
         <section class="hero" style="background-image: url('{{ Vite::asset('resources/images/bg-sea.jpg') }}')">
             <div class="relative z-10">
-                <p class="text-3xl mb-6 tracking-wider">
+                <p class="mb-6 text-3xl tracking-wider">
                     web developer
                 </p>
-                <h1 class="full-name raleway font-bold tracking-widest">
+                <h1 class="text-5xl font-bold tracking-widest raleway md:text-8xl">
                     Sho Tsukamoto
                 </h1>
             </div>
         </section>
-        <section class="py-32 bg-dark-grayish-blue">
-            <div class="max-w-screen-lg mx-auto">
+        <section class="px-4 py-16 bg-dark-grayish-blue md:px-0 md:py-32">
+            <div class="mx-auto max-w-screen-lg">
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'ABOUT'])
                 </div>
                 <div class="flex flex-wrap md:flex-nowrap">
                     <div class="w-full md:w-4/12">
                         <figure>
-                            <img src="{{ Vite::asset('resources/images/my_profile.jpg') }}" alt="">
+                            <img class="mx-auto w-full" src="{{ Vite::asset('resources/images/my_profile.jpg') }}" alt="">
                         </figure>
                     </div>
-                    <div class="w-full md:w-8/12 pb-16 px-16">
+                    <div class="w-full pt-8 md:w-8/12 md:px-16 md:pt-0 md:pb-16">
                         <div class="mb-8 flex items-center">
-                            <span class="profile-name-line inline-block mr-8"></span>
+                            <span class="mr-8 inline-block profile-name-line"></span>
                             <p>
                                 Sho Tsukamoto
                             </p>
                         </div>
-                        <div class="flex items-center mb-8">
-                            <h2 class="text-3xl mr-12">
+                        <div class="mb-8 flex items-center">
+                            <h2 class="mr-12 text-3xl">
                                 塚本翔
                             </h2>
                             <svg width="32px" height="32px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"
@@ -54,29 +54,32 @@
                         <p class="leading-7">
                             幼少期からコンピュータや工学に興味があり、パソコンを触っているのが大好きです。<br>
                             なかでも、プログラミングした内容がすぐ視覚化されるWeb系が好物でphpを愛しています。
-                            Laravelを用いたシステム開発を得意としています。
+                            Laravelを用いたシステム開発を得意としています。<br><br>
+
+                            システム開発において、打ち合わせ、要件定義、DB設計、フロントエンド＆バックエンドと一気通貫で経験しています。<br>
+                            また、IT系のみならず、電気工事や電気通信工事等にも対応可能です。
                         </p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="py-32" style="background-color: #222527">
-            <div class="max-w-screen-lg w-full mx-auto">
+        <section class="px-4 py-16 md:px-0 md:py-32" style="background-color: #222527">
+            <div class="mx-auto w-full max-w-screen-lg">
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'SKILLS'])
                 </div>
                 <div class="mb-16">
-                    <h2 class="pl-4 text-6xl text-white tracking-wider font-normal">
+                    <h2 class="pl-4 text-4xl font-normal tracking-wider text-white md:text-6xl">
                         php
                     </h2>
-                    <div class="bg-dark-grayish-blue -mt-4 p-6 pt-8">
+                    <div class="-mt-4 p-4 pt-8 bg-dark-grayish-blue md:p-8">
                         <p class="mb-4">
                             5.2~8.1まで5年ほど経験。<br>
                             composerを利用した独自フレームワークの実装経験もありますが、基本的にはLaravelを用いて開発を行っています。<br>
                             エディタはPhpStorm, 開発はDockerを用いて行っています。
                         </p>
                         <section class="mb-8">
-                            <h3 class="text-xl mb-4">
+                            <h3 class="mb-4 text-xl font-bold">
                                 Laravel
                             </h3>
                             <ul>
@@ -89,7 +92,7 @@
                             </ul>
                         </section>
                         <section class="mb-8">
-                            <h3 class="text-xl mb-4">
+                            <h3 class="mb-4 text-xl font-bold">
                                 WordPress
                             </h3>
                             <ul>
@@ -105,7 +108,7 @@
                             </ul>
                         </section>
                         <section>
-                            <h3 class="text-xl mb-4">
+                            <h3 class="mb-4 text-xl font-bold">
                                 EC-CUBE
                             </h3>
                             <ul>
@@ -120,8 +123,8 @@
                     </div>
                 </div>
                 <ul class="flex flex-wrap md:flex-nowrap">
-                    <li class="w-full md:w-1/3">
-                        <h3 class="text-xl mb-4">
+                    <li class="mb-4 w-full md:mb-0 md:w-1/3">
+                        <h3 class="mb-4 text-xl">
                             言語
                         </h3>
                         <ol class="pl-4">
@@ -132,8 +135,8 @@
                             @endforeach
                         </ol>
                     </li>
-                    <li class="w-full md:w-1/3">
-                        <h3 class="text-xl mb-4">
+                    <li class="mb-4 w-full md:mb-0 md:w-1/3">
+                        <h3 class="mb-4 text-xl">
                             フレームワーク・CMS
                         </h3>
                         <ol class="pl-4">
@@ -144,8 +147,8 @@
                             @endforeach
                         </ol>
                     </li>
-                    <li class="w-full md:w-1/3">
-                        <h3 class="text-xl mb-4">
+                    <li class="mb-4 w-full md:mb-0 md:w-1/3">
+                        <h3 class="mb-4 text-xl">
                             その他
                         </h3>
                         <ol class="pl-4">
@@ -159,24 +162,80 @@
                 </ul>
             </div>
         </section>
-        <section class="py-32 bg-dark-blue">
-            <div class="max-w-screen-lg w-full mx-auto">
+        <section class="px-4 py-16 bg-dark-blue md:px-0 md:py-32">
+            <div class="mx-auto w-full max-w-screen-lg">
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'WORKS'])
                 </div>
-                <ul class="flex flex-wrap">
-                    <li class="w-full w-1/3 px-4">
-                        <article>
-                            <figure>
-                                <img src="" alt="">
-                                <figcaption>
-                                    Instagram Graph Api Token Generator
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </li>
-
+                <ul class="flex flex-wrap md:flex-nowrap">
+                    @foreach($works as $work)
+                        <li class="mb-8 w-full md:mb-0 md:w-1/3">
+                            <article class="p-2 open" x-data="{ open: false }" @click="open = true">
+                                <figure class="cursor-pointer">
+                                    <img class="mb-4 aspect-video" src="{{ $work['img_path'] }}"
+                                         alt="{{ $work['title'] }}">
+                                    <figcaption>
+                                        {{ $work['title'] }}
+                                    </figcaption>
+                                </figure>
+                                <div class="fixed top-6 left-4 flex h-screen w-11/12 items-center justify-center md:top-0 md:left-0 md:w-screen"
+                                     style="background-color: rgba(0,0,0,.5);" x-show="open">
+                                    <div
+                                        class="flex h-auto w-full max-w-screen-xl flex-wrap overflow-y-scroll rounded bg-white p-4 text-black shadow-xl md:flex-nowrap md:p-12"
+                                        @click.away="open = false">
+                                        <div class="mb-4 w-full md:mb-0 md:w-5/12">
+                                            <h1 class="mb-4 text-2xl font-bold">
+                                                {{ $work['title'] }}
+                                            </h1>
+                                            <p class="text-sm md:text-base">
+                                                {!! nl2br($work['abstract'] ?? '') !!}
+                                            </p>
+                                        </div>
+                                        <div class="w-full md:w-7/12">
+                                            <img class="aspect-video w-full" src="{{ $work['detail_img'] ?? '' }}"
+                                                 alt="work detail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    @endforeach
                 </ul>
+            </div>
+        </section>
+        <section class="px-4 py-16 md:px-0 md:py-32" style="background-color: #222527">
+            <div class="mx-auto w-full max-w-screen-lg">
+                <div class="mb-16">
+                    @include('components.heading-main',['heading' => 'BLOG'])
+                </div>
+                <p class="mb-4 pl-4">
+                    前職スタッフブログにて経験を記載しています。
+                </p>
+                <ul class="mb-8 flex flex-wrap md:flex-nowrap">
+                    @foreach($blogs as $blog)
+                        <li class="mb-8 w-full md:mb-0 md:w-1/3">
+                            <article class="p-2">
+                                <a href="{{ $blog['site_path'] }}" target="_blank" rel="noopener">
+                                    <figure>
+                                        <img class="mb-2 aspect-video object-cover" src="{{ $blog['eyecatch_uri'] }}"
+                                             alt="{{ $blog['title'] }}">
+                                        <figcaption>
+                                            {{ $blog['title'] }}
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </article>
+                        </li>
+                    @endforeach
+                </ul>
+                <div class="text-right">
+                    <div class="flex items-center justify-end">
+                        <a class="text-xl" href="https://webty.jp/staffblog/author/tsukamoto/" target="_blank" rel="noopener">
+                            VIEW MORE
+                        </a>
+                        <span class="ml-4 inline-block profile-name-line"></span>
+                    </div>
+                </div>
             </div>
         </section>
     </article>

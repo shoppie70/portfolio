@@ -35,7 +35,7 @@
     @yield('content')
 </main>
 <footer>
-    {{--            @include('front::pages.footer')--}}
+    @include('partials.footer')
 </footer>
 
 @include('partials.script')
