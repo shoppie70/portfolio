@@ -12,7 +12,7 @@
                 </h1>
             </div>
         </section>
-        <section class="px-4 py-16 bg-dark-grayish-blue md:px-0 md:py-32">
+        <section id="about" class="px-4 py-16 bg-dark-grayish-blue md:px-0 md:py-32">
             <div class="mx-auto max-w-screen-lg">
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'ABOUT'])
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </section>
-        <section class="px-4 py-16 md:px-0 md:py-32" style="background-color: #222527">
+        <section id="skills" class="px-4 py-16 md:px-0 md:py-32" style="background-color: #222527">
             <div class="mx-auto w-full max-w-screen-lg">
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'SKILLS'])
@@ -162,7 +162,7 @@
                 </ul>
             </div>
         </section>
-        <section class="px-4 py-16 bg-dark-blue md:px-0 md:py-32">
+        <section id="works" class="px-4 py-16 bg-dark-blue md:px-0 md:py-32">
             <div class="mx-auto w-full max-w-screen-lg">
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'WORKS'])
@@ -203,7 +203,7 @@
                 </ul>
             </div>
         </section>
-        <section class="px-4 py-16 md:px-0 md:py-32" style="background-color: #222527">
+        <section id="blog" class="px-4 py-16 md:px-0 md:py-32" style="background-color: #222527">
             <div class="mx-auto w-full max-w-screen-lg">
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'BLOG'])
