@@ -7,7 +7,7 @@ use Spatie\ViewModels\ViewModel;
 
 class TopPageViewModel extends ViewModel
 {
-    public $title;
+    public string $title;
     public function __construct($title)
     {
         $this->title = $title;
@@ -51,7 +51,7 @@ class TopPageViewModel extends ViewModel
         return [
             [
                 'title' => 'Instagram Graph API Token Generator',
-                'img_path' => Vite::asset('resources/images/top/instagram.jpg'),
+                'img_path' => asset('works/instagram.jpg'),
                 'abstract' => '<a class="text-blue-500" href="https://instagram.salvador79.dev">https://instagram.salvador79.dev</a>
 
                 インスタグラムの投稿をWebページに埋め込む際は、
@@ -65,11 +65,11 @@ class TopPageViewModel extends ViewModel
                 コードは下記Githubリンクからご覧になれます。
                 <a href="https://github.com/shoppie70/InstagramGraphApiTokenGenerator">https://github.com/shoppie70/InstagramGraphApiTokenGenerator</a>
                 ',
-                'detail_img' => Vite::asset('resources/images/top/instagram_site.jpg')
+                'detail_img' => asset('works/instagram_site.jpg')
             ],
             [
                 'title' => 'ひまわり建宅',
-                'img_path' => Vite::asset('resources/images/top/himaken.jpg'),
+                'img_path' => asset('works/himaken.jpg'),
                 'abstract' => '<a class="text-blue-500" href="https://himaken.co.jp">https://himaken.co.jp</a>
 
                 岡山市北区の不動産、有限会社ひまわり建宅さんのHPです。
@@ -80,25 +80,26 @@ class TopPageViewModel extends ViewModel
                 Sage10 + Tailwind CSS + Alpine.js はWordPress制作でのデファクトスタンダードになっております。<br>
                 物件の絞り込み検索には、カスタム投稿タイプ＆カスタムフィールドを使用し、WP Queryで対応しています。
                 ',
-                'detail_img' => Vite::asset('resources/images/top/himaken.jpg')
+                'detail_img' => asset('works/himaken.jpg')
             ],
             [
                 'title' => '前田杯 公式ホームページ',
-                'img_path' => Vite::asset('resources/images/top/maedahai.jpg'),
-                'abstract' => '<a class="text-blue-500" href="https://instagram.salvador79.dev">https://instagram.salvador79.dev</a>
+                'img_path' => asset('works/maedahai.jpg'),
+                'abstract' => '<a class="text-blue-500" href="https://fishing.salvador79.dev">https://fishing.salvador79.dev</a>
 
-                インスタグラムの投稿をWebページに埋め込む際は、
-                Instagram Graph APIを利用してトークンを発行する必要があります。
+                友人と一緒に釣り大会を運営しています。
+                こちらは去年の秋に開催した、大会の応募システムになります。
 
-                手動でトークンを発行するのが煩わしかったので
-                自動取得できるツールを作って運用しております。
-
-                毎日、日本のみならず世界の方々からも利用して頂いております。
-
+                Laravelを用いて開発しております。
+                管理画面から応募者の確認が可能です。
                 コードは下記Githubリンクからご覧になれます。
-                <a href="https://github.com/shoppie70/InstagramGraphApiTokenGenerator">https://github.com/shoppie70/InstagramGraphApiTokenGenerator</a>
+                <a class="text-blue-500" href="https://github.com/shoppie70/FishingTournamentEntryForm">https://github.com/shoppie70/FishingTournamentEntryForm</a>
+
+                大会の公式ページについては現在、構築中です。
+                以下のURLからご覧になれます。
+                <a class="text-blue-500" href="https://staging.maeda-hai.com">https://staging.maeda-hai.com</a>
                 ',
-                'detail_img' => Vite::asset('resources/images/top/instagram_site.jpg')
+                'detail_img' => asset('works/maedahai.jpg'),
             ],
         ];
     }
