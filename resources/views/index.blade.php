@@ -69,7 +69,10 @@
                             Laravelを用いたシステム開発を得意としています。<br><br>
 
                             システム開発において、打ち合わせ、要件定義、DB設計、フロントエンド＆バックエンドと一気通貫で経験しています。<br>
-                            また、IT系のみならず、電気工事や電気通信工事等にも対応可能です。
+                            また、IT系のみならず、電気工事や電気通信工事等にも対応可能です。<br><br>
+
+                            職務経歴書は以下のURLからアクセス可能です。<br>
+                            <a href="https://hackmd.io/@sho-tsukamoto/CV" target="_blank" rel="noopener">https://hackmd.io/@sho-tsukamoto/CV</a>
                         </p>
                     </div>
                 </div>
@@ -88,7 +91,7 @@
                         <p class="mb-4">
                             5.2~8.1まで5年ほど経験。<br>
                             composerを利用した独自フレームワークの実装経験もありますが、基本的にはLaravelを用いて開発を行っています。<br>
-                            エディタはPhpStorm, 開発はDockerを用いて行っています。
+                            エディタはPhpStorm, 開発はDocker Desktop を用いて行っています。
                         </p>
                         <section class="mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
                             <h3 class="mb-4 text-xl font-bold">
@@ -99,7 +102,7 @@
                                     - 主にLaravel6～から利用しています。
                                 </li>
                                 <li>
-                                    - laravel-modulesを用い、管理画面とフロント画面を分け、モジュラモノリスを意識した開発を行っています。
+                                    - <a href="https://github.com/nWidart/laravel-modules" target="_blank" rel="noopener">laravel-modules</a>を用い、管理画面とフロント画面を分け、モジュラモノリスを意識した開発を行っています。
                                 </li>
                             </ul>
                         </section>
@@ -109,7 +112,7 @@
                             </h3>
                             <ul>
                                 <li class="mb-2">
-                                    - 主にSage10を用い、MVCライクなテーマ開発を行っています。
+                                    - 主に<a href="https://github.com/roots/sage" target="_blank" rel="noopener">Sage10</a>を用い、MVCライクなテーマ開発を行っています。
                                 </li>
                                 <li class="mb-2">
                                     - ViewはTailwind CSSを用いてスピーディなコーディングを進めています。
@@ -135,42 +138,20 @@
                     </div>
                 </div>
                 <ul class="flex flex-wrap md:flex-nowrap">
-                    <li class="mb-4 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
-                        <h3 class="mb-4 text-xl">
-                            言語
-                        </h3>
-                        <ol class="pl-4">
-                            @foreach($my_languages as $my_language)
-                                <li class="mb-2">
-                                    - {{ $my_language }}
-                                </li>
-                            @endforeach
-                        </ol>
-                    </li>
-                    <li class="mb-4 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
-                        <h3 class="mb-4 text-xl">
-                            フレームワーク・CMS
-                        </h3>
-                        <ol class="pl-4">
-                            @foreach($frameworks as $framework)
-                                <li class="mb-2">
-                                    - {{ $framework }}
-                                </li>
-                            @endforeach
-                        </ol>
-                    </li>
-                    <li class="mb-4 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
-                        <h3 class="mb-4 text-xl">
-                            その他
-                        </h3>
-                        <ol class="pl-4">
-                            @foreach($others as $other_item)
-                                <li class="mb-2">
-                                    - {{ $other_item }}
-                                </li>
-                            @endforeach
-                        </ol>
-                    </li>
+                    @foreach($skills as $skill_name => $skill_array)
+                        <li class="mb-4 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeInUp" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
+                            <h3 class="mb-4 text-xl font-bold">
+                                {{ $skill_name }}
+                            </h3>
+                            <ol class="pl-2">
+                                @foreach($skill_array as $skill)
+                                    <li class="mb-2">
+                                        - {{ $skill }}
+                                    </li>
+                                @endforeach
+                            </ol>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </section>
@@ -179,9 +160,9 @@
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'WORKS'])
                 </div>
-                <ul class="flex flex-wrap md:flex-nowrap">
+                <ul class="flex flex-wrap">
                     @foreach($works as $work)
-                        <li class="mb-8 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
+                        <li class="mb-8 w-full md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
                             <article class="p-2 open" x-data="{ open: false }" @click="open = true">
                                 <figure class="cursor-pointer">
                                     <img class="mb-4 aspect-video" src="{{ $work['img_path'] ?? '' }}"
@@ -203,8 +184,8 @@
                                                 {!! nl2br($work['abstract'] ?? '') !!}
                                             </p>
                                         </div>
-                                        <div class="w-full md:w-7/12">
-                                            <img class="aspect-video w-full" src="{{ $work['detail_img'] ?? '' }}"
+                                        <div class="md:pl-4 w-full md:w-7/12">
+                                            <img class="w-full" src="{{ $work['detail_img'] ?? '' }}"
                                                  alt="work detail">
                                         </div>
                                     </div>

@@ -13,36 +13,43 @@ class TopPageViewModel extends ViewModel
         $this->title = $title;
     }
 
+    public function skills(): array
+    {
+        return [
+            '言語' => $this->my_languages(),
+            '資格' => $this->qualifications(),
+            'その他スキル' => $this->others()
+        ];
+    }
+
     public function my_languages(): array
     {
         return [
             'php',
             'HTML',
             'CSS',
-            'JavaScript',
-            'Python'
+            'JavaScript(npm,node.js,yarn,alpine.js)',
+            'Python(djangoでの構築経験)'
         ];
     }
 
-    public function frameworks(): array
+    public function qualifications(): array
     {
         return [
-            'Laravel',
-            'WordPress',
-            'EC-CUBE',
+            '第二種電気工事士',
+            '工事担任者 第二級デジタル通信'
         ];
     }
 
     public function others(): array
     {
         return [
-            'git',
-            'Linux',
-            '電気工事',
-            '電気通信工事',
+            'gitによるバージョン管理',
+            'Linuxの知識',
+            '電気工事・電気通信工事',
             'PC修理・復旧',
             'ネットワーク構築',
-            '動画制作'
+            '動画制作（YouTubeチャンネル運営中）'
         ];
     }
 
@@ -100,6 +107,54 @@ class TopPageViewModel extends ViewModel
                 <a class="text-blue-500" href="https://staging.maeda-hai.com" target="_blank" rel="noopener">https://staging.maeda-hai.com</a>
                 ',
                 'detail_img' => asset('works/maedahai.jpg'),
+            ],
+            [
+                'title' => '飲食店 テイクアウトシステム',
+                'img_path' => asset('works/takeout.jpg'),
+                'abstract' => '在職中に顧客との打ち合わせから
+                DB設計・デザイン・構築まで担当したシステムになります。
+
+                フレームワークはLaravelを用いて開発しています。
+                ショッピングカート機能は<a href="https://github.com/Crinsane/LaravelShoppingcart">LaravelShoppingcart</a>を使用しています。
+                決済システムにはStripeを使っております。
+
+                管理画面では、注文が入ると音が鳴るように作成しており、
+                厨房でもテイクアウトの注文が入ったことが分かりやすくなっております。
+                ',
+                'detail_img' => asset('works/takeout.jpg'),
+            ],
+            [
+                'title' => 'ホテル 予約システム',
+                'img_path' => asset('works/hotel.jpg'),
+                'abstract' => '在職中に顧客との打ち合わせから
+                DB設計・デザイン・構築まで担当したシステムになります。
+
+                フレームワークはLaravelを用いて開発しています。
+                決済システムにはStripeを使っております。
+
+                顧客からの要望により、予約が入った際は
+                空き部屋を自動的に選択して割り振るシステムを取り入れています。
+
+                特別料金設定や定休日設定も部屋ごとに設定可能です。
+                ',
+                'detail_img' => asset('works/hotel.jpg'),
+            ],
+            [
+                'title' => '病院食堂 職員食予約システム',
+                'img_path' => asset('works/smile.jpg'),
+                'abstract' => '在職中に顧客との打ち合わせから
+                DB設計・デザイン・構築まで担当したシステムになります。
+
+                フレームワークはLaravelを用いて開発しています。
+                このシステムは管理画面も含めて、基本的にCSSはTailwind CSSで作成しております。
+
+                システム導入前は、職員さん達は日々の職員食を紙で予約しておりました。
+                こちらのシステムを導入することで個人のスマホで職員食を予約できるようになりました。
+
+                職員さんは移動や転勤があるので、病院の事務側の管理画面と
+                食堂職員側の管理画面も作成しております。
+                ',
+                'detail_img' => asset('works/smile.jpg'),
             ],
         ];
     }
