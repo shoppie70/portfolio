@@ -29,7 +29,7 @@
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'ABOUT'])
                 </div>
-                <div class="flex flex-wrap md:flex-nowrap">
+                <div class="flex flex-wrap md:flex-nowrap wow animate__animated animate__fadeInUp">
                     <div class="w-full md:w-4/12">
                         <figure>
                             <img class="mx-auto w-full" src="{{ Vite::asset('resources/images/my_profile.jpg') }}" alt="">
@@ -80,7 +80,7 @@
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'SKILLS'])
                 </div>
-                <div class="mb-16">
+                <div class="mb-16 wow animate__animated animate__fadeInUp">
                     <h2 class="pl-4 text-4xl font-normal tracking-wider text-white md:text-6xl">
                         php
                     </h2>
@@ -90,7 +90,7 @@
                             composerを利用した独自フレームワークの実装経験もありますが、基本的にはLaravelを用いて開発を行っています。<br>
                             エディタはPhpStorm, 開発はDockerを用いて行っています。
                         </p>
-                        <section class="mb-8">
+                        <section class="mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
                             <h3 class="mb-4 text-xl font-bold">
                                 Laravel
                             </h3>
@@ -103,7 +103,7 @@
                                 </li>
                             </ul>
                         </section>
-                        <section class="mb-8">
+                        <section class="mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
                             <h3 class="mb-4 text-xl font-bold">
                                 WordPress
                             </h3>
@@ -119,7 +119,7 @@
                                 </li>
                             </ul>
                         </section>
-                        <section>
+                        <section class="wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
                             <h3 class="mb-4 text-xl font-bold">
                                 EC-CUBE
                             </h3>
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <ul class="flex flex-wrap md:flex-nowrap">
-                    <li class="mb-4 w-full md:mb-0 md:w-1/3">
+                    <li class="mb-4 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
                         <h3 class="mb-4 text-xl">
                             言語
                         </h3>
@@ -147,7 +147,7 @@
                             @endforeach
                         </ol>
                     </li>
-                    <li class="mb-4 w-full md:mb-0 md:w-1/3">
+                    <li class="mb-4 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
                         <h3 class="mb-4 text-xl">
                             フレームワーク・CMS
                         </h3>
@@ -159,7 +159,7 @@
                             @endforeach
                         </ol>
                     </li>
-                    <li class="mb-4 w-full md:mb-0 md:w-1/3">
+                    <li class="mb-4 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
                         <h3 class="mb-4 text-xl">
                             その他
                         </h3>
@@ -181,10 +181,10 @@
                 </div>
                 <ul class="flex flex-wrap md:flex-nowrap">
                     @foreach($works as $work)
-                        <li class="mb-8 w-full md:mb-0 md:w-1/3">
+                        <li class="mb-8 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
                             <article class="p-2 open" x-data="{ open: false }" @click="open = true">
                                 <figure class="cursor-pointer">
-                                    <img class="mb-4 aspect-video" src="{{ $work['img_path'] }}"
+                                    <img class="mb-4 aspect-video" src="{{ $work['img_path'] ?? '' }}"
                                          alt="{{ $work['title'] }}">
                                     <figcaption>
                                         {{ $work['title'] }}
@@ -225,7 +225,7 @@
                 </p>
                 <ul class="mb-8 flex flex-wrap md:flex-nowrap">
                     @foreach($blogs as $blog)
-                        <li class="mb-8 w-full md:mb-0 md:w-1/3">
+                        <li class="mb-8 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
                             <article class="p-2">
                                 <a href="{{ $blog['site_path'] }}" target="_blank" rel="noopener">
                                     <figure>
