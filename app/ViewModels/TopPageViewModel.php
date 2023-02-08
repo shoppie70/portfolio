@@ -7,12 +7,6 @@ use Spatie\ViewModels\ViewModel;
 
 class TopPageViewModel extends ViewModel
 {
-    public string $title;
-    public function __construct($title)
-    {
-        $this->title = $title;
-    }
-
     public function skills(): array
     {
         return [

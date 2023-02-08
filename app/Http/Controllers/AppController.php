@@ -8,8 +8,7 @@ class AppController extends Controller
 {
     public function index()
     {
-        $title = 'top';
-        $viewModel = new TopPageViewModel($title);
+        $viewModel = new TopPageViewModel();
 
         return view('index', $viewModel);
     }
