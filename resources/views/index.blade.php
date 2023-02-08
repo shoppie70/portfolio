@@ -7,7 +7,7 @@
                 <p class="mb-6 text-3xl tracking-wider job-title">
                     web developer
                 </p>
-                <h1 class="title flex overflow-hidden text-5xl font-bold tracking-widest raleway md:text-8xl">
+                <h1 class="flex overflow-hidden text-5xl font-bold tracking-widest title raleway md:text-8xl">
                     <span>S</span>
                     <span>h</span>
                     <span>o</span>
@@ -29,7 +29,7 @@
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'ABOUT'])
                 </div>
-                <div class="flex flex-wrap md:flex-nowrap wow animate__animated animate__fadeInUp">
+                <div class="flex flex-wrap wow animate__animated animate__fadeInUp md:flex-nowrap">
                     <div class="w-full md:w-4/12">
                         <figure>
                             <img class="mx-auto w-full" src="{{ Vite::asset('resources/images/my_profile.jpg') }}" alt="">
@@ -139,7 +139,7 @@
                 </div>
                 <ul class="flex flex-wrap md:flex-nowrap">
                     @foreach($skills as $skill_name => $skill_array)
-                        <li class="mb-4 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeInUp" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
+                        <li class="mb-4 w-full wow animate__animated animate__fadeInUp md:mb-0 md:w-1/3" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
                             <h3 class="mb-4 text-xl font-bold">
                                 {{ $skill_name }}
                             </h3>
@@ -162,7 +162,7 @@
                 </div>
                 <ul class="flex flex-wrap">
                     @foreach($works as $work)
-                        <li class="mb-8 w-full md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
+                        <li class="mb-8 w-full wow animate__animated animate__fadeIn md:w-1/3" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
                             <article class="p-2 open" x-data="{ open: false }" @click="open = true">
                                 <figure class="cursor-pointer">
                                     <img class="mb-4 aspect-video" src="{{ $work['img_path'] ?? '' }}"
@@ -184,7 +184,7 @@
                                                 {!! nl2br($work['abstract'] ?? '') !!}
                                             </p>
                                         </div>
-                                        <div class="md:pl-4 w-full md:w-7/12">
+                                        <div class="w-full md:w-7/12 md:pl-4">
                                             <img class="w-full" src="{{ $work['detail_img'] ?? '' }}"
                                                  alt="work detail">
                                         </div>
@@ -196,7 +196,7 @@
                 </ul>
             </div>
         </section>
-        <section id="blog" class="bg-cyanish-black px-4 py-16 md:px-0 md:py-32">
+        <section id="blog" class="px-4 py-16 bg-cyanish-black md:px-0 md:py-32">
             <div class="mx-auto w-full max-w-screen-lg">
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'BLOG'])
@@ -206,7 +206,7 @@
                 </p>
                 <ul class="mb-8 flex flex-wrap md:flex-nowrap">
                     @foreach($blogs as $blog)
-                        <li class="mb-8 w-full md:mb-0 md:w-1/3 wow animate__animated animate__fadeIn" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
+                        <li class="mb-8 w-full wow animate__animated animate__fadeIn md:mb-0 md:w-1/3" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
                             <article class="p-2">
                                 <a href="{{ $blog['site_path'] }}" target="_blank" rel="noopener">
                                     <figure>
