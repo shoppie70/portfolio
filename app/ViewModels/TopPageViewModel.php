@@ -46,13 +46,13 @@ class TopPageViewModel extends ViewModel
         ];
     }
 
-    public function works()
+    public function works(): array
     {
         return [
             [
                 'title' => 'Instagram Graph API Token Generator',
                 'img_path' => asset('works/instagram.jpg'),
-                'abstract' => '<a class="text-blue-500" href="https://instagram.salvador79.dev">https://instagram.salvador79.dev</a>
+                'abstract' => '<a class="text-blue-500" href="https://instagram.salvador79.dev" target="_blank" rel="noopener">https://instagram.salvador79.dev</a>
 
                 インスタグラムの投稿をWebページに埋め込む際は、
                 Instagram Graph APIを利用してトークンを発行する必要があります。
@@ -70,7 +70,7 @@ class TopPageViewModel extends ViewModel
             [
                 'title' => 'ひまわり建宅',
                 'img_path' => asset('works/himaken.jpg'),
-                'abstract' => '<a class="text-blue-500" href="https://himaken.co.jp">https://himaken.co.jp</a>
+                'abstract' => '<a class="text-blue-500" href="https://himaken.co.jp" target="_blank" rel="noopener">https://himaken.co.jp</a>
 
                 岡山市北区の不動産、有限会社ひまわり建宅さんのHPです。
                 打ち合わせ、要件定義、DB設計、フロントエンド＆バックエンドと一気通貫で対応しました。
@@ -85,7 +85,7 @@ class TopPageViewModel extends ViewModel
             [
                 'title' => '前田杯 公式ホームページ',
                 'img_path' => asset('works/maedahai.jpg'),
-                'abstract' => '<a class="text-blue-500" href="https://fishing.salvador79.dev">https://fishing.salvador79.dev</a>
+                'abstract' => '<a class="text-blue-500" href="https://fishing.salvador79.dev" target="_blank" rel="noopener">https://fishing.salvador79.dev</a>
 
                 友人と一緒に釣り大会を運営しています。
                 こちらは去年の秋に開催した、大会の応募システムになります。
@@ -93,11 +93,11 @@ class TopPageViewModel extends ViewModel
                 Laravelを用いて開発しております。
                 管理画面から応募者の確認が可能です。
                 コードは下記Githubリンクからご覧になれます。
-                <a class="text-blue-500" href="https://github.com/shoppie70/FishingTournamentEntryForm">https://github.com/shoppie70/FishingTournamentEntryForm</a>
+                <a class="text-blue-500" href="https://github.com/shoppie70/FishingTournamentEntryForm" target="_blank" rel="noopener">https://github.com/shoppie70/FishingTournamentEntryForm</a>
 
                 大会の公式ページについては現在、構築中です。
                 以下のURLからご覧になれます。
-                <a class="text-blue-500" href="https://staging.maeda-hai.com">https://staging.maeda-hai.com</a>
+                <a class="text-blue-500" href="https://staging.maeda-hai.com" target="_blank" rel="noopener">https://staging.maeda-hai.com</a>
                 ',
                 'detail_img' => asset('works/maedahai.jpg'),
             ],
