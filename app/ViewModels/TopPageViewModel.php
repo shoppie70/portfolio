@@ -47,7 +47,7 @@ class TopPageViewModel extends ViewModel
         ];
     }
 
-    public function works(): array
+    public function outside_works(): array
     {
         return [
             [
@@ -102,6 +102,12 @@ class TopPageViewModel extends ViewModel
                 ',
                 'detail_img' => asset('works/maedahai.jpg'),
             ],
+        ];
+    }
+
+    public function works(): array
+    {
+        return [
             [
                 'title' => '飲食店 テイクアウトシステム',
                 'img_path' => asset('works/takeout.jpg'),

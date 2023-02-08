@@ -7,7 +7,7 @@
                 <p class="mb-6 text-3xl tracking-wider job-title">
                     web developer
                 </p>
-                <h1 class="flex overflow-hidden text-5xl font-bold tracking-widest title raleway md:text-8xl">
+                <h1 class="flex overflow-hidden text-4xl font-bold tracking-widest title raleway md:text-8xl">
                     <span>S</span>
                     <span>h</span>
                     <span>o</span>
@@ -160,6 +160,46 @@
                 <div class="mb-16">
                     @include('components.heading-main',['heading' => 'WORKS'])
                 </div>
+                <h3 class="text-xl font-bold mb-4">
+                    社外活動
+                </h3>
+                <ul class="flex flex-wrap">
+                    @foreach($outside_works as $outside_work)
+                        <li class="mb-8 w-full wow animate__animated animate__fadeIn md:w-1/3" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
+                            <article class="p-2 open" x-data="{ open: false }" @click="open = true">
+                                <figure class="cursor-pointer">
+                                    <img class="mb-4 aspect-video" src="{{ $outside_work['img_path'] ?? '' }}"
+                                         alt="{{ $outside_work['title'] }}">
+                                    <figcaption>
+                                        {{ $outside_work['title'] }}
+                                    </figcaption>
+                                </figure>
+                                <div class="fixed top-6 left-4 flex h-screen w-11/12 items-center justify-center md:top-0 md:left-0 md:w-screen"
+                                     style="background-color: rgba(0,0,0,.5);" x-show="open">
+                                    <div
+                                        class="flex h-auto w-full max-w-screen-xl flex-wrap overflow-y-scroll rounded bg-white p-4 text-black shadow-xl md:flex-nowrap md:p-12"
+                                        @click.away="open = false">
+                                        <div class="mb-4 w-full md:mb-0 md:w-5/12">
+                                            <h1 class="mb-4 text-2xl font-bold">
+                                                {{ $outside_work['title'] }}
+                                            </h1>
+                                            <p class="text-sm md:text-base">
+                                                {!! nl2br($outside_work['abstract'] ?? '') !!}
+                                            </p>
+                                        </div>
+                                        <div class="w-full md:w-7/12 md:pl-4">
+                                            <img class="w-full" src="{{ $outside_work['detail_img'] ?? '' }}"
+                                                 alt="work detail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    @endforeach
+                </ul>
+                <h3 class="text-xl font-bold mb-4">
+                    前職での構築例
+                </h3>
                 <ul class="flex flex-wrap">
                     @foreach($works as $work)
                         <li class="mb-8 w-full wow animate__animated animate__fadeIn md:w-1/3" data-wow-delay="{{ $loop->iteration * 0.2 }}s">
