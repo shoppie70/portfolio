@@ -64,15 +64,18 @@
                             1997年7月生まれ、岡山県出身。
                         </p>
                         <p class="leading-7">
-                            幼少期からコンピュータや工学に興味があり、パソコンを触っているのが大好きです。<br>
-                            なかでも、プログラミングした内容がすぐ視覚化されるWeb系が好物でphpを愛しています。
+                            幼少期からコンピュータや工学に興味があり、パソコンを触っているのが大好きです。
+                            なかでも、Web系が好物でphpを愛しています。<br>
                             Laravelを用いたシステム開発を得意としています。<br><br>
 
                             システム開発において、打ち合わせ、要件定義、DB設計、フロントエンド＆バックエンドと一気通貫で経験しています。<br>
                             また、IT系のみならず、電気工事や電気通信工事等にも対応可能です。<br><br>
 
                             職務経歴書は以下のURLからアクセス可能です。<br>
-                            <a href="https://hackmd.io/@sho-tsukamoto/CV" target="_blank" rel="noopener">https://hackmd.io/@sho-tsukamoto/CV</a>
+                            <a href="https://hackmd.io/@sho-tsukamoto/CV" target="_blank" rel="noopener">https://hackmd.io/@sho-tsukamoto/CV</a><br><br>
+
+                            また、このサイトのソースコードは以下のURLからアクセス可能です。<br>
+                            <a href="https://github.com/shoppie70/portfolio" target="_blank" rel="noopener">https://github.com/shoppie70/portfolio</a>
                         </p>
                     </div>
                 </div>
